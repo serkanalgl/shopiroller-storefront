@@ -1,8 +1,16 @@
+require('dotenv').config({ path: `./../../.env` });
+
 module.exports = {
   integrations: {
-    __replace_me__: {
-      location: '@vue-storefront/__replace_me__-api/server',
-      configuration: {}
+    shopiroller: {
+      location: '@vue-storefront/shopiroller-api/server',
+      configuration: {
+        api: {
+          url: process.env.SHOPIROLLER_API_URL,
+          apiKey: process.env.SHOPIROLLER_API_APIKEY,
+          appKey: process.env.SHOPIROLLER_API_APPKEY,
+        }
+      }
     }
   }
 };

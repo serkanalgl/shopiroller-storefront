@@ -1576,9 +1576,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@juggle/resize-observer@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.3.1.tgz#b50a781709c81e10701004214340f25475a171a0"
-  integrity sha512-zMM9Ds+SawiUkakS7y94Ymqx+S0ORzpG3frZirN3l+UlXUmSUR7hF4wxCVqW+ei94JzV5kt0uXBcoOEAuiydrw==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
+  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
 "@lerna/add@4.0.0":
   version "4.0.0"
@@ -2880,18 +2880,18 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storefront-ui/shared@0.11.4":
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-0.11.4.tgz#a56c1e7379b0398d9529ea316abe9581051e4c48"
-  integrity sha512-w7/Vng6YaNDJHMksdQc6tPOeCSuU7hgglXwvQzyekKbSSnObd+U31O1GzcdWS/bkmt1rzP87bX0pkNHs0Z5GTg==
+"@storefront-ui/shared@0.12.3":
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-0.12.3.tgz#98bed5975331816f90ded3e05e5c5ec71d80bd49"
+  integrity sha512-ari13tRJCijnjUPWMt8vrFMYO3bRbi+uVCed95004q1pTExjGzOEV8VJfVMLok4Wo2DnP6wTEKZZbya73tyTcg==
 
-"@storefront-ui/vue@0.11.4":
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-0.11.4.tgz#81cdbe947d13dfd67ceb7484c46b6d3e2d6cee87"
-  integrity sha512-sc3hOEgusyEH1AO8SOfD6m6t/38B6K8FKyYtYpIHdnxvC7fYPFWSsz8AUbGZvbaI2TQDUaZB23d6dQ2ROQOF/g==
+"@storefront-ui/vue@^0.12.3":
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-0.12.3.tgz#bbb72039bbe11fda8766f2ed5b156b51ca4b03de"
+  integrity sha512-u+SE6yJeznscnvEyMleB5TwPl+P8ZjIk2rjwXK57+LfvCujP5Mpa/uChZdzUIwLUN/GxLjTr9fSzXyVTIXCZ/A==
   dependencies:
     "@glidejs/glide" "^3.3.0"
-    "@storefront-ui/shared" "0.11.4"
+    "@storefront-ui/shared" "0.12.3"
     body-scroll-lock "^3.0.1"
     cloudinary-build-url "^0.1.1"
     core-js "^3.6.5"
@@ -5018,7 +5018,7 @@ camelcase@^6.0.0, camelcase@^6.2.0:
 can-use-dom@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
-  integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
+  integrity sha512-ceOhN1DL7Y4O6M0j9ICgmTYziV89WMd96SvSl0REd8PMgrY0B/WBOPoed5S1KUmJqXgUXh8gzSe6E3ae27upsQ==
 
 caniuse-api@^3.0.0:
   version "3.0.0"
@@ -5853,7 +5853,12 @@ core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.0.1, core-js@^3.19.0, core-js@^3.6.5:
+core-js@^3.0.1:
+  version "3.26.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.26.0.tgz#a516db0ed0811be10eac5d94f3b8463d03faccfe"
+  integrity sha512-+DkDrhoR4Y0PxDz6rurahuB+I45OsEUv8E1maPTB6OuHRohMMcznBq9TMpdpDMm/hUPob/mJJS3PqgbHpMTQgw==
+
+core-js@^3.19.0, core-js@^3.6.5:
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
   integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
@@ -6738,6 +6743,11 @@ dot-prop@^6.0.1:
   integrity sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==
   dependencies:
     is-obj "^2.0.0"
+
+dotenv@^16.0.3:
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
+  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
 
 dotenv@^9.0.2:
   version "9.0.2"
@@ -8338,7 +8348,7 @@ hable@^3.0.0:
 hammerjs@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
-  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+  integrity sha512-tSQXBXS/MWQOn/RKckawJ61vvsDpCom87JgxiYdGwHdOa0ht0vzUWDlfioofFCRU0L+6NGDt6XzbgoJvZkMeRQ==
 
 handlebars@^4.7.7:
   version "4.7.7"
@@ -10494,7 +10504,7 @@ lodash.templatesettings@^4.0.0:
 lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
-  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
@@ -14183,17 +14193,17 @@ simple-swizzle@^0.2.2:
     is-arrayish "^0.3.1"
 
 simplebar-vue@^1.4.0:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/simplebar-vue/-/simplebar-vue-1.6.8.tgz#ba6d6dc0e61d07f5bcb84f4bd8e3187c39452ff2"
-  integrity sha512-rykHqyDxeylI3z2NOAsiD+rhcx+cfiOrfnIotDJFC8FqoO4jyJMEN8Q+61PTMOfVJA0oSWFZySlagCH6lG+5qQ==
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/simplebar-vue/-/simplebar-vue-1.6.10.tgz#475a4e02b7a682062633ac62e75d570dcb9b45dc"
+  integrity sha512-Asp4VJ9u5M+Rjzfg7sStroq5K7hXF8wdldt1tsGci0IW1rofEx2lk0Mb4FCjuoP2mgH440Fi2D2+3NwUy1/KVw==
   dependencies:
     core-js "^3.0.1"
-    simplebar "^5.3.6"
+    simplebar "^5.3.9"
 
-simplebar@^5.3.6:
-  version "5.3.6"
-  resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-5.3.6.tgz#d9383576a09a6fd09e19543f8e9906a3e87c3896"
-  integrity sha512-FJUMbV+hNDd/m+1/fvD41TXKd5mSdlI5zgBygkaQIV3SffNbcLhSbJT6ufTs8ZNRLJ6i+qc/KCFMqWmvlGWMhA==
+simplebar@^5.3.9:
+  version "5.3.9"
+  resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-5.3.9.tgz#168ea0eb6d52f29f03960e40d9b69a1b28cf6318"
+  integrity sha512-1vIIpjDvY9sVH14e0LGeiCiTFU3ILqAghzO6OI9axeG+mvU/vMSrvXeAXkBolqFFz3XYaY8n5ahH9MeP3sp2Ag==
   dependencies:
     "@juggle/resize-observer" "^3.3.1"
     can-use-dom "^0.1.0"

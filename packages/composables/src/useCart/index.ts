@@ -7,7 +7,7 @@ import type {
   Cart,
   CartItem,
   Product
-} from '@vue-storefront/__replace_me__-api';
+} from '@vue-storefront/shopiroller-api';
 
 const params: UseCartFactoryParams<Cart, CartItem, Product> = {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -18,7 +18,11 @@ const params: UseCartFactoryParams<Cart, CartItem, Product> = {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   addItem: async (context: Context, { currentCart, product, quantity, customQuery }) => {
-    console.log('Mocked: useCart.addItem');
+    console.log('Mocked: useCart.addItem', currentCart, product, quantity, customQuery);
+    console.log('currentCart', currentCart);
+    console.log('product', product);
+    console.log('quantity', quantity);
+    console.log('customQuery', customQuery);
     return {};
   },
 

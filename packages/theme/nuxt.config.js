@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Vue Storefront',
+    title: 'Shopiroller & Storefront',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,11 +50,11 @@ export default {
       // @core-development-only-end
       useRawSource: {
         dev: [
-          '@vue-storefront/__replace_me__',
+          '@vue-storefront/shopiroller',
           '@vue-storefront/core'
         ],
         prod: [
-          '@vue-storefront/__replace_me__',
+          '@vue-storefront/shopiroller',
           '@vue-storefront/core'
         ]
       }
@@ -63,8 +63,8 @@ export default {
     ['@vue-storefront/nuxt-theme', {
       generate: {
         replace: {
-          apiClient: '@vue-storefront/__replace_me__-api',
-          composables: '@vue-storefront/__replace_me__'
+          apiClient: '@vue-storefront/shopiroller-api',
+          composables: '@vue-storefront/shopiroller'
         }
       }
     }],
@@ -72,7 +72,7 @@ export default {
     /* project-only-start
     ['@vue-storefront/nuxt-theme'],
     project-only-end */
-    ['@vue-storefront/__replace_me__/nuxt', {}]
+    ['@vue-storefront/shopiroller/nuxt', {}]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

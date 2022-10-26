@@ -154,5 +154,12 @@ export default {
   'show more': 'show more',
   'hide': 'hide',
   'Change to grid view': 'Change to grid view',
-  'Change to list view': 'Change to list view'
+  'Change to list view': 'Change to list view',
+  pages:{
+    product: {
+      tab_title_description: 'Description',
+      tab_title_properties: 'Properties',
+      related_products_title: 'Match it with'
+    }
+  }
 };

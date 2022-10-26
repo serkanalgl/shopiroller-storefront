@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/__replace_me__-theme",
+  "name": "@vue-storefront/shopiroller-theme",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -22,13 +22,14 @@
     "update:update": "ncu -u"
   },
   "dependencies": {
-    "@storefront-ui/vue": "0.11.4",
-    "@vue-storefront/__replace_me__": "0.0.1",
+    "@storefront-ui/vue": "^0.12.3",
     "@vue-storefront/middleware": "~2.5.4",
     "@vue-storefront/nuxt": "~2.5.4",
     "@vue-storefront/nuxt-theme": "~2.5.4",
+    "@vue-storefront/shopiroller": "0.0.1",
     "cookie-universal-nuxt": "^2.1.5",
     "core-js": "^3.19.0",
+    "dotenv": "^16.0.3",
     "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.5.0",
     "vee-validate": "^3.4.13",

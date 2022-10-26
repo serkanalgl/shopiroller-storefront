@@ -1,17 +1,35 @@
 import { apiClientFactory } from '@vue-storefront/core';
-import type { Setttings, Endpoints } from './types';
+import axios from 'axios';
 
-function onCreate(settings: Setttings) {
+import { getProduct } from './api/getProduct';
+import { getProducts } from './api/getProducts';
+import { getCategories } from './api/getCategories';
+
+function onCreate(settings) {
+
+  const client = axios.create({
+    baseURL: settings.api.url || 'https://api.shopiroller.com',
+    headers: {
+      'Api-Key': settings.api.apiKey,
+      'App-Key': settings.api.appKey,
+      'X-Fallback-Language': 'en',
+      'Accept-Language': 'en'
+    }
+  });
+
   return {
     config: settings,
-    client: {}
+    client
   };
+
 }
 
-const { createApiClient } = apiClientFactory<Setttings, Endpoints>({
+const { createApiClient } = apiClientFactory<any, any>({
   onCreate,
   api: {
-
+    getProduct,
+    getProducts,
+    getCategories
   }
 });
 

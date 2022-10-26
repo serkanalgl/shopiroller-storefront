@@ -1,6 +1,25 @@
+export * from './product';
+export * from './category';
+
+export type GetProductsPriceFilter = {
+    min: number;
+    max: number;
+}
+
+export type GetProductsParams = {
+    categoryId: string;
+    term: string;
+
+    price: GetProductsPriceFilter;
+
+    page: number;
+    perPage: number;
+    sort: string;
+}
+
 export type TODO = unknown;
 
-export type Setttings = TODO;
+// export type Setttings = TODO;
 
 export type Endpoints = TODO;
 
@@ -9,8 +28,6 @@ export type BillingAddress = TODO;
 export type Cart = TODO;
 
 export type CartItem = TODO;
-
-export type Category = TODO;
 
 export type Coupon = TODO;
 
@@ -24,7 +41,7 @@ export type OrderItem = TODO;
 
 export type PasswordResetResult = TODO;
 
-export type Product = TODO;
+// export type Product = TODO;
 
 export type ProductFilter = TODO;
 

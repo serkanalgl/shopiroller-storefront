@@ -4,7 +4,7 @@ import {
   AgnosticPrice,
   AgnosticTotals
 } from '@vue-storefront/core';
-import type { Wishlist, WishlistItem } from '@vue-storefront/__replace_me__-api';
+import type { Wishlist, WishlistItem } from '@vue-storefront/shopiroller-api';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getItems(wishlist: Wishlist): WishlistItem[] {
@@ -69,6 +69,11 @@ function getFormattedPrice(price: number): string {
   return '';
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function isWishlistDisabled(wishlist: Wishlist): boolean {
+  return true;
+}
+
 export const wishlistGetters: WishlistGetters<Wishlist, WishlistItem> = {
   getItems,
   getTotals,
@@ -80,5 +85,6 @@ export const wishlistGetters: WishlistGetters<Wishlist, WishlistItem> = {
   getShippingPrice,
   getItemSku,
   getTotalItems,
-  getFormattedPrice
+  getFormattedPrice,
+  isWishlistDisabled
 };

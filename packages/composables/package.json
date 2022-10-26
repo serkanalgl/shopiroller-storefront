@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/__replace_me__",
+  "name": "@vue-storefront/shopiroller",
   "version": "0.0.1",
   "private": true,
   "sideEffects": false,
@@ -23,8 +23,9 @@
     "update:update": "ncu -u"
   },
   "dependencies": {
-    "@vue-storefront/__replace_me__-api": "0.0.1",
-    "@vue-storefront/core": "~2.5.4"
+    "@vue-storefront/core": "~2.5.4",
+    "@vue-storefront/shopiroller-api": "0.0.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.6",
