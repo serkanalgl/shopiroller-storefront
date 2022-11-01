@@ -15,14 +15,12 @@ const params: UseProductFactoryParams<ProductSearchResult, SearchParams> = {
     const { id, ...searchParams } = params;
 
     if (id) {
-      const productResult = await context.$shopiroller.api.getProduct(id);
-      const { data } = productResult;
-      return [data];
+      const product = await context.$shopiroller.api.getProduct(id);
+      return [product];
 
     } else {
-      const productSearchResult = await context.$shopiroller.api.getProducts(searchParams);
-      const { data } = productSearchResult;
-      return data;
+      const { data: products } = await context.$shopiroller.api.getProducts(searchParams);
+      return products;
     }
 
   }

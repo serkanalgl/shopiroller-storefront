@@ -161,5 +161,26 @@ export default {
       tab_title_properties: 'Properties',
       related_products_title: 'Match it with'
     }
+  },
+  composables: {
+    facet_getters: {
+      sort_price_lowest: 'Lowest Price',
+      sort_price_highest: 'Highest Price',
+      sort_bestsellers: 'Bestsellers',
+      sort_newest: 'New Arrivals'
+    }
+  },
+  components:{
+    category_page_header: {
+      filters: 'Filters',
+      sort_by: 'Sort by',
+      select_sorting: 'Select sorting',
+      products_found: 'Products found',
+      items: 'Items',
+      view: 'View',
+      change_to_grid_view: 'Change to grid view',
+      change_to_list_view: 'Change to list view'
+    }
   }
+  
 };

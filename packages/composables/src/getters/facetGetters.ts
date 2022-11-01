@@ -24,10 +24,19 @@ function getGrouped(params: FacetSearchResult<Facet>, criteria?: FacetSearchCrit
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getSortOptions(params: FacetSearchResult<Facet>): AgnosticSort {
-  return {
-    options: [],
-    selected: ''
-  };
+
+  const { sort } = params.input;
+
+  const options = [
+    {type: 'sort', id: 'Price', value: 'composables.facet_getters.sort_price_lowest'},
+    {type: 'sort', id: '-Price', value: 'composables.facet_getters.sort_price_highest'},
+    {type: 'sort', id: '-Stats.OrderCount', value: 'composables.facet_getters.sort_bestsellers'},
+    {type: 'sort', id: '-CreateDate', value: 'composables.facet_getters.sort_newest'}
+  ];
+
+  const selectedOption = options.find(option => option.id === sort);
+
+  return { options, selected: selectedOption ? selectedOption.id : '' };
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

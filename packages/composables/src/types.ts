@@ -3,7 +3,7 @@ import {
 } from '@vue-storefront/core';
 
 import type { CategorySearchResult, Product } from '@vue-storefront/shopiroller-api';
-import type { AgnosticGroupedFacet } from '@vue-storefront/core';
+import type { AgnosticGroupedFacet, AgnosticFacetSearchParams } from '@vue-storefront/core';
 
 export type TODO = any;
 
@@ -11,7 +11,7 @@ export type UseBillingAddParams = TODO;
 
 export type UseCategorySearchParams = TODO;
 
-export type UseFacetSearchParams = TODO;
+export type UseFacetSearchParams = AgnosticFacetSearchParams;
 
 export type UseProductSearchParams = ProductsSearchParams;
 

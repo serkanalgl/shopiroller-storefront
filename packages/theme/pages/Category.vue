@@ -236,13 +236,9 @@ export default {
     const pagination = computed(() => facetGetters.getPagination(result.value));
     const activeCategory = computed(() => {
       const items = categoryTree.value.items;
-
-      if (!items || !items.length) {
-        return '';
-      }
+      if (!items || !items.length) return '';
 
       const category = items.find(({ isCurrent, items }) => isCurrent || items.find(({ isCurrent }) => isCurrent));
-
       return category?.label || items[0].label;
     });
 

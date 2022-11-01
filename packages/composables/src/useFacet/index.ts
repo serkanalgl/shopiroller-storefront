@@ -12,7 +12,7 @@ import { GetProductsParams } from '@vue-storefront/shopiroller-api';
 const factoryParams = {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   search: async (context: Context, params: FacetSearchResult<SearchParams>) => {
-    console.log('facet search', params);
+
     const searchParams = params.input as SearchParams;
     const slugItems = searchParams.categorySlug?.split('-');
     const categoryId = slugItems[slugItems.length - 1];
@@ -24,7 +24,8 @@ const factoryParams = {
       categoryId: categoryId,
       page: searchParams.page,
       perPage: searchParams.itemsPerPage || 25,
-      sort: searchParams.sort,
+      sort: searchParams.sort.startsWith('-') ? searchParams.sort.slice(1) : searchParams.sort,
+      sortBy: searchParams.sort.startsWith('-') ? 'Descending' : 'Ascending',
       term: undefined,
       price: undefined
     };

@@ -18,8 +18,12 @@ const useUiHelpers = () => {
 
     return {
       categorySlug,
-      page: 1
-    } as any;
+      term: query.term || '',
+      page: parseInt(query.page, 10) || 1,
+      itemsPerPage: parseInt(query.itemsPerPage, 10) || 10,
+      sort: query.sort || '-CreateDate'
+    };
+
   };
 
   // eslint-disable-next-line

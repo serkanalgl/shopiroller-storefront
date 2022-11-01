@@ -15,6 +15,7 @@ export type GetProductsParams = {
     page: number;
     perPage: number;
     sort: string;
+    sortBy: string;
 }
 
 export type TODO = unknown;

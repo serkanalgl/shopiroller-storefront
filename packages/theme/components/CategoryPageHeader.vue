@@ -3,7 +3,7 @@
     <LazyHydrate on-interaction>
       <SfButton
         class="sf-button--text navbar__filters-button"
-        :aria-label="$t('Filters')"
+        :aria-label="$t('components.category_page_header.filters')"
         @click="toggleFilterSidebar"
       >
         <SfIcon
@@ -17,11 +17,11 @@
     </LazyHydrate>
 
     <div class="navbar__sort desktop-only">
-      <span class="navbar__label">{{ $t('Sort by') }}:</span>
+      <span class="navbar__label">{{ $t('components.category_page_header.sort_by') }}:</span>
       <LazyHydrate on-interaction>
         <SfSelect
           :value="sortBy.selected"
-          :placeholder="$t('Select sorting')"
+          :placeholder="$t('components.category_page_header.select_sorting')"
           class="navbar__select"
           @input="th.changeSorting"
         >
@@ -31,7 +31,7 @@
             :value="option.id"
             class="sort-by__option"
           >
-            {{ option.value }}
+            {{ $t(option.value) }}
           </SfSelectOption
           >
         </SfSelect>
@@ -39,13 +39,13 @@
     </div>
 
     <div class="navbar__counter">
-      <span class="navbar__label desktop-only">{{ $t('Products found') }}: </span>
+      <span class="navbar__label desktop-only">{{ $t('components.category_page_header.products_found') }}: </span>
       <span class="desktop-only">{{ pagination.totalItems }}</span>
-      <span class="navbar__label smartphone-only">{{ pagination.totalItems }} {{ $t('Items') }}</span>
+      <span class="navbar__label smartphone-only">{{ pagination.totalItems }} {{ $t('components.category_page_header.items') }}</span>
     </div>
 
     <div class="navbar__view">
-      <span class="navbar__view-label desktop-only">{{ $t('View') }}</span>
+      <span class="navbar__view-label desktop-only">{{ $t('components.category_page_header.view') }}</span>
       <SfIcon
         v-e2e="'tiles-icon'"
         class="navbar__view-icon"
@@ -53,7 +53,7 @@
         icon="tiles"
         size="12px"
         role="button"
-        :aria-label="$t('Change to grid view')"
+        :aria-label="$t('components.category_page_header.change_to_grid_view')"
         :aria-pressed="isCategoryGridView"
         @click="changeToCategoryGridView"
       />
@@ -64,7 +64,7 @@
         icon="list"
         size="12px"
         role="button"
-        :aria-label="$t('Change to list view')"
+        :aria-label="$t('components.category_page_header.change_to_list_view')"
         :aria-pressed="!isCategoryGridView"
         @click="changeToCategoryListView"
       />
@@ -107,7 +107,7 @@ export default {
     const { result } = useFacet();
 
     const sortBy = computed(() => facetGetters.getSortOptions(result.value));
-    const facets = computed(() => facetGetters.getGrouped(result.value, ['color', 'size']));
+    const facets = computed(() => facetGetters.getGrouped(result.value, []));
 
     return {
       th,
