@@ -182,7 +182,6 @@ export default {
     });
 
     const updateFilter = (filter) => {
-      console.log('filter', filter);
       router.push({
         path: route?.value?.path,
         query: {

@@ -62,6 +62,7 @@ function getAttributes(products: Product[] | Product, filterByAttributeName?: st
   }
 
   const variationGroups = _.uniqBy(productList.flatMap((product) => product.variationGroups), (vg) => vg.id);
+  console.log('variationGroups', variationGroups);
   const variations = _.uniqBy(variationGroups.flatMap((variationGroup) => variationGroup.variations), (v) => v.id);
 
   const findVariationGroupName = (variationValue) => {
@@ -100,7 +101,8 @@ function getDescription(product: Product): string {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getCategoryIds(product: Product): string[] {
-  return product.categoryId ? [product.categoryId] : [];
+  if (!product || !product.categoryId) return [];
+  return [product.categoryId];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

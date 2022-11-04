@@ -13,13 +13,13 @@ import { categoryGetters } from './categoryGetters';
 import { SearchData } from '../types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getAll(params: FacetSearchResult<Facet>, criteria?: FacetSearchCriteria): AgnosticFacet[] {
-  return [];
+function getAll(searchData: FacetSearchResult<SearchData>, criteria?: FacetSearchCriteria): AgnosticFacet[] {
+  return searchData.data ? searchData.data.facets.flatMap(facet => facet.options) : [];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getGrouped(params: FacetSearchResult<Facet>, criteria?: FacetSearchCriteria): AgnosticGroupedFacet[] {
-  return [];
+function getGrouped(searchData: FacetSearchResult<SearchData>, criteria?: FacetSearchCriteria): AgnosticGroupedFacet[] {
+  return searchData.data ? searchData.data.facets : [];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

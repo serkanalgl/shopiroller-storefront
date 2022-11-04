@@ -2,7 +2,7 @@
   <div id="filters">
     <SfSidebar
       :visible="isFilterSidebarOpen"
-      title="Filters"
+      title="$t(components.filters_sidebar.filters)"
       class="sidebar-filters"
       @close="toggleFilterSidebar"
     >
@@ -14,30 +14,15 @@
             class="filters__title sf-heading--left"
             :key="`filter-title-${facet.id}`"
           />
-          <div
-            v-if="isFacetColor(facet)"
-            class="filters__colors"
-            :key="`${facet.id}-colors`"
-          >
-            <SfColor
+
+          <SfFilter
               v-for="option in facet.options"
               :key="`${facet.id}-${option.value}`"
-              :color="option.value"
-              :selected="isFilterSelected(facet, option)"
-              class="filters__color"
-              @click="() => selectFilter(facet, option)"
-            />
-          </div>
-          <div v-else>
-            <SfFilter
-              v-for="option in facet.options"
-              :key="`${facet.id}-${option.value}`"
-              :label="option.id + `${option.count ? ` (${option.count})` : ''}`"
+              :label="option.value + `${option.count ? ` (${option.count})` : ''}`"
               :selected="isFilterSelected(facet, option)"
               class="filters__item"
               @change="() => selectFilter(facet, option)"
             />
-          </div>
         </div>
       </div>
       <SfAccordion class="filters smartphone-only">
@@ -64,14 +49,14 @@
             class="sf-button--full-width"
             @click="applyFilters"
           >
-            {{ $t('Done') }}
+            {{ $t('components.filters_sidebar.done') }}
           </SfButton
           >
           <SfButton
             class="sf-button--full-width filters__button-clear"
             @click="clearFilters"
           >
-            {{ $t('Clear all') }}
+            {{ $t('components.filters_sidebar.clear_all') }}
           </SfButton
           >
         </div>
@@ -110,22 +95,25 @@ export default {
     const { toggleFilterSidebar, isFilterSidebarOpen } = useUiState();
     const { result } = useFacet();
 
-    const facets = computed(() => facetGetters.getGrouped(result.value, ['color', 'size']));
+    const facets = computed(() => facetGetters.getGrouped(result.value, []));
     const selectedFilters = ref({});
 
     const setSelectedFilters = () => {
       if (!facets.value.length || Object.keys(selectedFilters.value).length) return;
-      selectedFilters.value = facets.value.reduce((prev, curr) => ({
-        ...prev,
-        [curr.id]: curr.options
-          .filter(o => o.selected)
-          .map(o => o.id)
-      }), {});
+      selectedFilters.value = facets.value.reduce((prev, curr) => {
+        return {
+          ...prev,
+          [curr.id]: curr.options
+            .filter(o => o.selected)
+            .map(o => o.id)
+        };
+      }, {});
     };
 
     const isFilterSelected = (facet, option) => (selectedFilters.value[facet.id] || []).includes(option.id);
 
     const selectFilter = (facet, option) => {
+
       if (!selectedFilters.value[facet.id]) {
         Vue.set(selectedFilters.value, facet.id, []);
       }

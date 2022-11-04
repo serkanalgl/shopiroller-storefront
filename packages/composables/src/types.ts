@@ -3,7 +3,19 @@ import {
 } from '@vue-storefront/core';
 
 import type { CategorySearchResult, Product } from '@vue-storefront/shopiroller-api';
-import type { AgnosticGroupedFacet, AgnosticFacetSearchParams } from '@vue-storefront/core';
+import type { AgnosticGroupedFacet } from '@vue-storefront/core';
+
+export type SearchParams = {
+  categorySlug?: string;
+  term?: string;
+  priceFilter: string;
+  brandFilter: [string];
+  variantFilter: [string];
+
+  page?: number;
+  itemsPerPage?: number;
+  sort?: string;
+};
 
 export type TODO = any;
 
@@ -11,7 +23,7 @@ export type UseBillingAddParams = TODO;
 
 export type UseCategorySearchParams = TODO;
 
-export type UseFacetSearchParams = AgnosticFacetSearchParams;
+export type UseFacetSearchParams = SearchParams;
 
 export type UseProductSearchParams = ProductsSearchParams;
 
@@ -39,3 +51,4 @@ export type SearchData = {
   facets: AgnosticGroupedFacet[];
   itemsPerPage: number;
 };
+

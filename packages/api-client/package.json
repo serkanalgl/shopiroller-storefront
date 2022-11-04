@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "@vue-storefront/core": "~2.5.4",
-    "axios": "0.21.1"
+    "axios": "0.21.1",
+    "qs": "^6.11.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"

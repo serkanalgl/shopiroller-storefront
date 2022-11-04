@@ -1,3 +1,4 @@
+import { AgnosticGroupedFacet } from '@vue-storefront/core';
 import { Category } from './category';
 
 export type ProductVariation = {
@@ -31,6 +32,7 @@ export type Image = {
 export type ProductSearchMetadata = {
     queryCount: number;
     itemsCount: number;
+    facets: AgnosticGroupedFacet[];
 }
 
 export type Product = {

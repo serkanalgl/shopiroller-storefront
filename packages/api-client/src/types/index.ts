@@ -10,6 +10,8 @@ export type GetProductsParams = {
     categoryId: string;
     term: string;
 
+    brandId: string | [string],
+    variantData: string,
     price: GetProductsPriceFilter;
 
     page: number;

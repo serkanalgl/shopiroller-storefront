@@ -18,6 +18,8 @@ const useUiHelpers = () => {
 
     return {
       categorySlug,
+      brandFilter: query.brandId,
+      variantFilter: query.variant,
       term: query.term || '',
       page: parseInt(query.page, 10) || 1,
       itemsPerPage: parseInt(query.itemsPerPage, 10) || 10,
@@ -37,8 +39,8 @@ const useUiHelpers = () => {
   };
 
   // eslint-disable-next-line
-  const changeFilters = (filters) => {
-    console.warn('[VSF] please implement useUiHelpers.changeFilters.');
+  const changeFilters = (filters: any) => { 
+    instance.$router.push({ query: { ...filters }});
   };
 
   // eslint-disable-next-line

@@ -180,7 +180,13 @@ export default {
       view: 'View',
       change_to_grid_view: 'Change to grid view',
       change_to_list_view: 'Change to list view'
-    }
+    },
+    filters_sidebar: {
+      done: 'Done',
+      clear_all: 'Clear all',
+      filters: 'Filters',
+      brands: 'Brands'
+    },
   }
   
 };

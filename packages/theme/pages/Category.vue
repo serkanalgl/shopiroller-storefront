@@ -363,6 +363,10 @@ export default {
       font-weight:var(--font-weight--semibold);
       text-decoration: underline;
     }
+    .sidebar--cat-selected{
+      font-weight:var(--font-weight--semibold);
+      text-decoration: underline;
+    }
   }
 }
 .products {
